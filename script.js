@@ -18,6 +18,9 @@ function testError(name, age) {
   if (name === null || age === null) {
     throw new Error('Arguments not valid');
   }
+  if (typeof name !== 'string' || isNaN(age)) {
+    throw new TypeError('Invalid variables');
+  }
   return name, age;
 }
 
