@@ -15,7 +15,7 @@ function yearOfBirth(age){
 }
 
 function testError(name, age) {
-  if (name === null || age === null) {
+  if (name === undefined || age === undefined) {
     throw new Error('Arguments not valid');
   }
   if (typeof name !== 'string' || isNaN(age)) {
@@ -30,7 +30,7 @@ function getYearOfBirth(age){
 }
 
 try {
-  const greeting1 = createGreeting(name, age);
+  const greeting1 = createGreeting('Silas', 24);
   console.log(greeting1);
 } 
 catch(e){
